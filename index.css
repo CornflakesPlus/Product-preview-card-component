@@ -1,0 +1,158 @@
+/* BASE STYLES */
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+
+
+main {
+    width: 95%;
+    overflow: hidden;
+    background-color: hsl(0, 0%, 100%);
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+
+h1 {
+    font-family: 'Fraunces', serif;
+    margin: 15px 0;
+    line-height: 1.8rem;
+}
+
+
+h5 {
+    font-weight: normal;
+    text-transform: uppercase;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 0.5rem;
+    margin: 10px 0;
+}
+
+
+p {
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+}
+
+
+ul {
+    margin-top: 45px;
+    font-family: 'Fraunces', serif;
+    padding: 0;
+}
+
+
+li {
+    display: inline-block;
+}
+
+
+small {  /* These properties used for adjusting the position of the crossed-out price */
+    position: relative; 
+    bottom: 5px;
+    padding-left: 10px;
+    color: hsl(228, 12%, 48%);
+}
+
+
+button {
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    display: block;
+    margin: 0 auto 15px;
+    padding: 10px 90px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+
+button:hover {
+    background-color: #023020; /* Used darkgreen intead of the given color, given color not match */
+    cursor: pointer;
+}
+
+/* CLASS STYLES */
+
+.content-main {
+    padding: 0 20px;
+}
+
+
+.price-style {
+    color: hsl(158, 36%, 37%);
+    font-size: 2rem;
+}
+
+
+.image-mobile, .image-desktop {
+    width: 100%;
+    height: 100%;
+}
+
+
+.image-desktop {
+    display: none; /* There are two images provided. so hid one image for mobile view */
+}
+
+/* MEDIA QUERIES MIN TO MAX */
+
+@media screen and (min-width: 750px) {
+
+    main {
+        width: 75%;
+        max-width: 600px;
+        margin-top: 130px;
+    }
+
+    .content-main {
+        float: right;
+        width: 55%;
+        padding-left: 10px;
+        padding-right: 5px;
+        padding-bottom: 10px;
+        margin-bottom: -25px;
+    }
+
+    .image-mobile {
+        display: none; /* There are two images provided. so hid one image for desktop view */
+    }
+
+    .image-desktop {
+        display: block;
+        float: left;
+        width: 42%;
+        height: 100%;
+    }   
+}
+
+@media screen and (min-width: 820px) {
+
+    h5, h1, p, ul {
+        padding-left: 20px;  /* To stretch the content in the content div padding used.*/                         
+        padding-right: 50px;  /* For some reason adding padding to .content-main was not working*/
+    }
+
+    p {
+        padding-right: 80px;
+        line-height: 1.4rem;
+    }
+
+    ul {
+        margin-top: 30px;
+    }
+
+    .content-main {
+        margin-top: 10px;
+        height: 372px; /* Setting a % value was not working at all, so px used instead */
+    }
+}
+
+
+
+/* THAT'S ALL FOLKS */
